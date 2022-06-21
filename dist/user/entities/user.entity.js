@@ -19,11 +19,11 @@ __decorate([
     __metadata("design:type", Number)
 ], User.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'first_name' }),
+    (0, typeorm_1.Column)({ name: 'firstName' }),
     __metadata("design:type", String)
 ], User.prototype, "firstName", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'last_name' }),
+    (0, typeorm_1.Column)({ name: 'lastName' }),
     __metadata("design:type", String)
 ], User.prototype, "lastName", void 0);
 __decorate([

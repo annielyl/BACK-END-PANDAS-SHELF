@@ -12,10 +12,10 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: number;
 
-  @Column({ name: 'first_name' })
+  @Column({ name: 'firstName' })
   firstName: string;
 
-  @Column({ name: 'last_name' })
+  @Column({ name: 'lastName' })
   lastName: string;
 
   @Column({ name: 'email' })
