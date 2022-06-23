@@ -8,7 +8,7 @@ import { UserModule } from './user/user.module';
 import { ReviewsMovie } from './reviews-movies/entities/reviews-movie.entity';
 import { ReviewsMoviesModule } from './reviews-movies/reviews-movies.module';
 import { MoviesModule } from './movies/movies.module';
-import { LoginModule } from './login/login.module';
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -26,7 +26,8 @@ import { LoginModule } from './login/login.module';
     UserModule,
     GenresModule,
     MoviesModule,
-    ReviewsMoviesModule
+    ReviewsMoviesModule,
+    AuthModule
   ],
 })
 export class AppModule {}

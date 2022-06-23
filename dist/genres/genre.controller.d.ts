@@ -7,5 +7,6 @@ export declare class GenreController {
     create(createGenreDto: CreateGenreDto): Promise<CreateGenreDto & import("./entities/genre.entity").Genre>;
     findAll(): Promise<import("./entities/genre.entity").Genre[]>;
     update(id: string, updateGenreDto: UpdateGenreDto): Promise<import("typeorm").UpdateResult>;
+    findOne(id: string): Promise<import("./entities/genre.entity").Genre>;
     remove(id: string): Promise<import("typeorm").DeleteResult>;
 }

@@ -30,6 +30,11 @@ export class MoviesController {
     return this.moviesService.update(id, updateMovieDto);
   }
 
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.moviesService.findOne(id);
+  }
+
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.moviesService.remove(id);

@@ -17,6 +17,7 @@ const user_module_1 = require("./user/user.module");
 const reviews_movie_entity_1 = require("./reviews-movies/entities/reviews-movie.entity");
 const reviews_movies_module_1 = require("./reviews-movies/reviews-movies.module");
 const movies_module_1 = require("./movies/movies.module");
+const auth_module_1 = require("./auth/auth.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -35,7 +36,8 @@ AppModule = __decorate([
             user_module_1.UserModule,
             genre_module_1.GenresModule,
             movies_module_1.MoviesModule,
-            reviews_movies_module_1.ReviewsMoviesModule
+            reviews_movies_module_1.ReviewsMoviesModule,
+            auth_module_1.AuthModule
         ],
     })
 ], AppModule);

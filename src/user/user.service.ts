@@ -15,14 +15,13 @@ export class UserService {
   create(createUserDto: CreateUserDto) {
     return this.usersRepository.save(createUserDto);
   }
-
+  // cara crachá do email
+  findOne(email: string): Promise<User | undefined> {
+    return this.usersRepository.findOne({email:email});
+  }
+  
   findAll() {
     return this.usersRepository.find();
-  }
-
-
-  findOne(id: string) {
-    return this.usersRepository.findOne(id);
   }
 
   update(id: string, updateUserDto: UpdateUserDto) {

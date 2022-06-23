@@ -30,6 +30,9 @@ let MoviesController = class MoviesController {
     update(id, updateMovieDto) {
         return this.moviesService.update(id, updateMovieDto);
     }
+    findOne(id) {
+        return this.moviesService.findOne(id);
+    }
     remove(id) {
         return this.moviesService.remove(id);
     }
@@ -55,6 +58,13 @@ __decorate([
     __metadata("design:paramtypes", [String, update_movie_dto_1.UpdateMovieDto]),
     __metadata("design:returntype", void 0)
 ], MoviesController.prototype, "update", null);
+__decorate([
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], MoviesController.prototype, "findOne", null);
 __decorate([
     (0, common_1.Delete)(':id'),
     __param(0, (0, common_1.Param)('id')),

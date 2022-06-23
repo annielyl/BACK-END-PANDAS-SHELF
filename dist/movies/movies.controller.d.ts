@@ -7,5 +7,6 @@ export declare class MoviesController {
     create(createMovieDto: CreateMovieDto): Promise<CreateMovieDto & import("./entities/movie.entity").Movie>;
     findAll(): Promise<import("./entities/movie.entity").Movie[]>;
     update(id: string, updateMovieDto: UpdateMovieDto): Promise<import("typeorm").UpdateResult>;
+    findOne(id: string): Promise<import("./entities/movie.entity").Movie>;
     remove(id: string): Promise<import("typeorm").DeleteResult>;
 }

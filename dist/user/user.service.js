@@ -24,11 +24,11 @@ let UserService = class UserService {
     create(createUserDto) {
         return this.usersRepository.save(createUserDto);
     }
+    findOne(email) {
+        return this.usersRepository.findOne({ email: email });
+    }
     findAll() {
         return this.usersRepository.find();
-    }
-    findOne(id) {
-        return this.usersRepository.findOne(id);
     }
     update(id, updateUserDto) {
         return this.usersRepository.update(id, updateUserDto);

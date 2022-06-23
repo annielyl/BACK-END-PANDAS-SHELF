@@ -30,6 +30,9 @@ let GenreController = class GenreController {
     update(id, updateGenreDto) {
         return this.genreService.update(id, updateGenreDto);
     }
+    findOne(id) {
+        return this.genreService.findOne(id);
+    }
     remove(id) {
         return this.genreService.remove(id);
     }
@@ -55,6 +58,13 @@ __decorate([
     __metadata("design:paramtypes", [String, update_genre_dto_1.UpdateGenreDto]),
     __metadata("design:returntype", void 0)
 ], GenreController.prototype, "update", null);
+__decorate([
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], GenreController.prototype, "findOne", null);
 __decorate([
     (0, common_1.Delete)(':id'),
     __param(0, (0, common_1.Param)('id')),

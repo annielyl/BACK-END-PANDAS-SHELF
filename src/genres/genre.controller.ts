@@ -30,6 +30,11 @@ export class GenreController {
     return this.genreService.update(id, updateGenreDto);
   }
 
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.genreService.findOne(id);
+  }
+
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.genreService.remove(id);
