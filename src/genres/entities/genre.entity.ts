@@ -1,12 +1,11 @@
-import { Movie } from '../../movies/entities/movie.entity';
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
   ManyToMany,
   JoinTable,
-  OneToMany,
 } from 'typeorm';
+import { Media } from 'src/media/entities/media.entity';
 @Entity()
 export class Genre {
   @PrimaryGeneratedColumn('uuid')
@@ -15,6 +14,7 @@ export class Genre {
   @Column({ name: 'type' })
   type: string;
 
-  //@OneToMany(() => Movie, (movie) => movie.genre)
-  //movies: Movie[];
+  @ManyToMany(() =>  Media)
+  @JoinTable()
+  media:  Media[];
 }

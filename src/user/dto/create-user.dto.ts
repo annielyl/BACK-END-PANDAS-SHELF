@@ -1,4 +1,4 @@
-import { ReviewsMovie } from "src/reviews-movies/entities/reviews-movie.entity";
+import { Media } from "src/media/entities/media.entity";
 
 export class CreateUserDto {
   firstName: string;
@@ -6,4 +6,5 @@ export class CreateUserDto {
   email: string;
   password: string;
   is_admin: boolean;
+  Media: Media;
 }

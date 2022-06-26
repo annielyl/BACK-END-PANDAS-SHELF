@@ -9,6 +9,8 @@ import { ReviewsMovie } from './reviews-movies/entities/reviews-movie.entity';
 import { ReviewsMoviesModule } from './reviews-movies/reviews-movies.module';
 import { MoviesModule } from './movies/movies.module';
 import { AuthModule } from './auth/auth.module';
+import { SeasonModule } from './season/season.module';
+import { StudiosModule } from './studios/studios.module';
 
 
 @Module({
@@ -27,7 +29,9 @@ import { AuthModule } from './auth/auth.module';
     GenresModule,
     MoviesModule,
     ReviewsMoviesModule,
-    AuthModule
+    AuthModule,
+    SeasonModule,
+    StudiosModule
   ],
 })
 export class AppModule {}

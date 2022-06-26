@@ -1,33 +1,43 @@
-//import { ReviewsMovie } from 'src/reviews-movies/entities/reviews-movie.entity';
-import { ReviewsMovie } from 'src/reviews-movies/entities/reviews-movie.entity';
+import { Media } from 'src/media/entities/media.entity';
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
   ManyToMany,
   JoinTable,
+  OneToMany,
 } from 'typeorm';
 @Entity()
 export class User {
   @PrimaryGeneratedColumn('uuid')
   id: number;
 
-  @Column({ name: 'firstName' })
+  @Column({ name: 'firstName', length: 50 })
   firstName: string;
 
-  @Column({ name: 'lastName' })
+  @Column({ name: 'lastName', length: 100})
   lastName: string;
 
-  @Column({ name: 'email' })
+  @Column({ name: 'email', length: 70 })
   email: string;
 
   @Column({ name: 'password' })
   password: string;
 
-  @Column({ default: true })
-  is_admin: boolean;
+  @Column({ name: 'bithdate' })
+  bithdate: Date;
 
-  @ManyToMany(() =>ReviewsMovie, reviewsMovie => reviewsMovie.user)
-  reviewsMovie: ReviewsMovie[];
+  @Column()
+  isAdmin: boolean;
+
+  @Column({name: 'picture'})
+  picture: string;
+
+  @Column({name: 'user_name', length: 40})
+  userName: string;
+
+  @ManyToMany(() => Media)
+  @JoinTable()
+  media: Media[];
 
 }
