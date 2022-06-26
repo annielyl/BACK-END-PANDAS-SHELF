@@ -12,7 +12,7 @@ import { UpdateStudioDto } from './dto/update-studio.dto';
 import { StudiosService } from './studios.service';
 
 @Controller('Studios')
-export class StudioController {
+export class StudiosController {
   constructor(private readonly StudioService: StudiosService) {}
 
   @Post()

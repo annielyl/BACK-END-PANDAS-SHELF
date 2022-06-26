@@ -24,8 +24,8 @@ export class User {
   @Column({ name: 'password' })
   password: string;
 
-  @Column({ name: 'bithdate' })
-  bithdate: Date;
+  @Column({ name: 'birthdate' })
+  birthdate: Date;
 
   @Column()
   isAdmin: boolean;

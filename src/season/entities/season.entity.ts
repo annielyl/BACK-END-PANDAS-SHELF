@@ -1,5 +1,5 @@
 import { Media } from "src/media/entities/media.entity";
-import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Season {
@@ -7,7 +7,7 @@ export class Season {
   id: number;
 
   @Column({ name: 'episodes_num' })
-  episodes_num: string;
+  episodes_num: number;
 
   @Column({ name: 'lastName', length: 240})
   description: string;

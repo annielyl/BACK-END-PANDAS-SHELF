@@ -7,17 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GenresModule = void 0;
-const movie_entity_1 = require("./../movies/entities/movie.entity");
 const common_1 = require("@nestjs/common");
 const genre_service_1 = require("./genre.service");
 const genre_controller_1 = require("./genre.controller");
 const typeorm_1 = require("@nestjs/typeorm");
 const genre_entity_1 = require("./entities/genre.entity");
+const media_entity_1 = require("../media/entities/media.entity");
 let GenresModule = class GenresModule {
 };
 GenresModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([genre_entity_1.Genre, movie_entity_1.Movie])],
+        imports: [typeorm_1.TypeOrmModule.forFeature([genre_entity_1.Genre, media_entity_1.Media])],
         controllers: [genre_controller_1.GenreController],
         providers: [genre_service_1.GenreService],
     })

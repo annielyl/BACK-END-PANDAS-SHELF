@@ -13,7 +13,10 @@ export class Media {
   @Column({name: 'title', length: 120 })
   title: string;
 
-  @Column({name: 'evaluation', length: 1})
+  @Column({name: 'duration'})
+  duration: string;
+
+  @Column({name: 'evaluation'})
   evaluation: number;
 
   @Column({name: 'description', length: 1000})
@@ -21,9 +24,6 @@ export class Media {
 
   @Column({name: 'realese_datw'})
   releaseDate: Date;
-
-  @Column({name: 'duration'})
-  duration: Timestamp;
 
   @Column({name: 'piscture', length: 300})
   picture: string;

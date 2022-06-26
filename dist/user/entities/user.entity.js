@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
-const reviews_movie_entity_1 = require("../../reviews-movies/entities/reviews-movie.entity");
+const media_entity_1 = require("../../media/entities/media.entity");
 const typeorm_1 = require("typeorm");
 let User = class User {
 };
@@ -19,15 +19,15 @@ __decorate([
     __metadata("design:type", Number)
 ], User.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'firstName' }),
+    (0, typeorm_1.Column)({ name: 'firstName', length: 50 }),
     __metadata("design:type", String)
 ], User.prototype, "firstName", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'lastName' }),
+    (0, typeorm_1.Column)({ name: 'lastName', length: 100 }),
     __metadata("design:type", String)
 ], User.prototype, "lastName", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'email' }),
+    (0, typeorm_1.Column)({ name: 'email', length: 70 }),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
@@ -35,13 +35,26 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: true }),
-    __metadata("design:type", Boolean)
-], User.prototype, "is_admin", void 0);
+    (0, typeorm_1.Column)({ name: 'birthdate' }),
+    __metadata("design:type", Date)
+], User.prototype, "birthdate", void 0);
 __decorate([
-    (0, typeorm_1.ManyToMany)(() => reviews_movie_entity_1.ReviewsMovie, reviewsMovie => reviewsMovie.user),
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], User.prototype, "isAdmin", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'picture' }),
+    __metadata("design:type", String)
+], User.prototype, "picture", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'user_name', length: 40 }),
+    __metadata("design:type", String)
+], User.prototype, "userName", void 0);
+__decorate([
+    (0, typeorm_1.ManyToMany)(() => media_entity_1.Media),
+    (0, typeorm_1.JoinTable)(),
     __metadata("design:type", Array)
-], User.prototype, "reviewsMovie", void 0);
+], User.prototype, "media", void 0);
 User = __decorate([
     (0, typeorm_1.Entity)()
 ], User);

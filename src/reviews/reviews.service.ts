@@ -9,27 +9,27 @@ import { Review } from './entities/reviews.entity';
 export class ReviewsService {
   constructor(
     @InjectRepository(Review)
-    private ReviewssRepository: Repository<Review>,
+    private ReviewsRepository: Repository<Review>,
   ) {}
 
   create(createReviewssDto: CreateReviewsDto) {
-    return this.ReviewssRepository.save(createReviewssDto);
+    return this.ReviewsRepository.save(createReviewssDto);
   }
 
   findAll() {
-    return this.ReviewssRepository.find();
+    return this.ReviewsRepository.find();
   }
 
 
   findOne(id: string) {
-    return this.ReviewssRepository.findOne(id,);
+    return this.ReviewsRepository.findOne(id,);
   }
 
   update(id: string, updateReviewsDto: UpdateReviewsDto) {
-    return this.ReviewssRepository.update(id, updateReviewsDto);
+    return this.ReviewsRepository.update(id, updateReviewsDto);
   }
 
   remove(id: string) {
-    return this.ReviewssRepository.delete(id);
+    return this.ReviewsRepository.delete(id);
   }
 }

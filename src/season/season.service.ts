@@ -9,27 +9,26 @@ import { Season } from './entities/season.entity';
 export class SeasonService {
   constructor(
     @InjectRepository(Season)
-    private SeasonsRepository: Repository<Season>,
+    private seasonRepository: Repository<Season>,
   ) {}
 
-  create(createSeasonDto: CreateSeasonDto) {
-    return this.SeasonsRepository.save(createSeasonDto);
+  create(createseasonDto: CreateSeasonDto) {
+    return this.seasonRepository.save(createseasonDto);
   }
 
   findAll() {
-    return this.SeasonsRepository.find();
+    return this.seasonRepository.find();
   }
-
 
   findOne(id: string) {
-    return this.SeasonsRepository.findOne(id);
+    return this.seasonRepository.findOne(id);
   }
 
-  update(id: string, updateSeasonsDto: UpdateSeasonDto) {
-    return this.SeasonsRepository.update(id, updateSeasonsDto);
+  update(id: string, updateaseasonDto: UpdateSeasonDto) {
+    return this.seasonRepository.update(id, updateaseasonDto);
   }
 
   remove(id: string) {
-    return this.SeasonsRepository.delete(id);
+    return this.seasonRepository.delete(id);
   }
 }

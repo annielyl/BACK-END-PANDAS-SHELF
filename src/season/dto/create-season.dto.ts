@@ -4,6 +4,5 @@ export class CreateSeasonDto {
   episodes_num: number;
   description: string;
   year: number;
-  media: Media
-
+  media: Media;
 }
